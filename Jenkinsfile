@@ -3,17 +3,17 @@ pipeline {
          stages {
              stage('Preparation') {
                steps {
-		       sh "mvn clean -f springExample"
+		       sh "mvn clean"
 		             }     
                             }
 	     stage('Test') {
                steps {
-			   sh "mvn test -f springExample"
+			   sh "mvn test"
 		             }  
                         }
 	     stage('Build') {
                steps {
-               sh "mvn package -f springExample"
+               sh "mvn package"
 		             }
 			             }
                  }
